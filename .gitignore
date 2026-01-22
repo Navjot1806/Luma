@@ -67,3 +67,7 @@ iOSInjectionProject/
 # Backup files
 *.bak
 *.backup
+
+# Configuration files with sensitive data
+# Uncomment if you add real API keys to Config.swift:
+# Luma/Config.swift

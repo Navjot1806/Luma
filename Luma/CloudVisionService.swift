@@ -1,18 +1,18 @@
 //
 //  CloudVisionService.swift
 //  Luma
-// AIzaSyACV971Nm0Aq24JnfeR1YFlovzGKOpEdVk
+//
 //  Uses Google Cloud Vision API for object detection and product search
 //
 
 import UIKit
 
 struct CloudVisionService {
-    
+
     // MARK: - Configuration
-    // TODO: Replace with your Google Cloud Vision API Key
+    // API Key is stored securely in Config.swift
     // Get one from: https://console.cloud.google.com/apis/credentials
-    static let apiKey = "AIzaSyACV971Nm0Aq24JnfeR1YFlovzGKOpEdVk"
+    static let apiKey = Config.googleCloudVisionAPIKey
     static let visionAPIURL = "https://vision.googleapis.com/v1/images:annotate"
     
     // MARK: - Response Models

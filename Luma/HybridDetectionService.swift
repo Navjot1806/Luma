@@ -1,20 +1,6 @@
 //
 //  HybridDetectionService.swift
 //  Luma
-// AIzaSyACV971Nm0Aq24JnfeR1YFlovzGKOpEdVk
-//  Automatically uses Cloud API if available, falls back to local detection
-//
-
-//
-//  HybridDetectionService.swift
-//  Luma
-//
-//  Automatically uses Cloud API if available, falls back to local detection
-//
-
-//
-//  HybridDetectionService.swift
-//  Luma
 //
 //  Automatically uses Cloud API if available, falls back to local detection
 //
@@ -29,8 +15,8 @@ struct HybridDetectionService {
     
     /// Main detection function that automatically chooses the best method
     static func detectObject(image: UIImage) async throws -> CloudVisionService.DetectionResult {
-        
-        if useCloudAPI && !CloudVisionService.apiKey.contains("AIzaSyACV971Nm0Aq24JnfeR1YFlovzGKOpEdVk") {
+
+        if useCloudAPI && Config.isCloudVisionConfigured {
             // Try cloud detection
             do {
                 return try await CloudVisionService.detectObject(image: image)
